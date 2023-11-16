@@ -1,0 +1,151 @@
+$dark-color: #333333;
+$text-color: #FFFFFF;
+$green-color: #99CC66;
+$blue-color: #33CCCC;
+$yelloew-color: #FFFF66;
+$orange-color: #CC9966;
+$background-dark-color:#262626;
+$background-light-color:#404040;
+
+body {
+    background-color: $dark-color;
+    color: $text-color;
+    font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+    font-weight: 300;
+    
+}
+
+ header {
+    .logo {
+        width: 40px;
+        height: 40px;
+        border: 7px solid white;
+        transform: rotate(45deg);
+        display: inline-block;
+        
+    }
+    h1 { 
+        display: inline-block;
+     }
+     
+     h2 {
+        font-size: 2.2rem;
+      }
+    
+  }
+
+  %wrap-cards {
+    display: inline-block;
+    vertical-align: middle;
+    border-radius: 20px;
+    padding: 35px 40px;
+    max-width: 712px;
+
+  }
+  
+ 
+  .new-event {
+    @extend %wrap-cards;
+    background-color: $background-dark-color;
+    .new-event-title{
+        color: $green-color
+    }
+    .new-event-date {
+        color: $green-color
+    }
+  }
+  
+  .another-story {
+    @extend %wrap-cards;
+    background-color: $background-light-color;
+    .another-story-title{
+        color: $blue-color
+    }
+    .another-story-date{
+        color: $blue-color
+    }
+
+
+  }
+  .latest-news {
+    @extend %wrap-cards;
+    background-color: $background-dark-color;
+    .latest-news-title{
+        color: $yelloew-color;
+    }
+    .latest-news-date {
+        color: $yelloew-color
+    }
+  } 
+  .new-project {
+    @extend %wrap-cards;
+    background-color: $background-light-color;
+    .new-project-title {
+        color: $orange-color;
+    }
+    .new-project-date {
+        color: $orange-color;
+    }
+  }
+  
+%horizontal-line {
+    width: 60px;
+    height: 2px;
+    margin-right: -11px;
+    background-color: #404040;
+}
+
+.horizontal-line {
+    @extend %horizontal-line
+}
+
+%vertical-line{
+    height:60px;
+    border-width: 10px;
+    color: #404040;
+    margin-left: 260px;
+}
+
+.vertical-line {
+    @extend %vertical-line
+}
+
+
+%form-control {
+    border-radius: 0;
+    border-color: #666666;
+    color: #CCCCCC;
+    background: transparent;
+    padding: 12px 15px;
+    margin-bottom: 13px;
+    border: 1px solid #666666;
+    
+}
+.form-name
+{
+    @extend %form-control;
+}
+.form-message {
+    @extend %form-control;
+}
+.form-email {
+    @extend %form-control;
+}
+.form-submit {
+    @extend %form-control;
+    padding: 15px 50px;
+    color: #CCCCCC;
+}
+
+
+a {
+    text-decoration: none;
+    color: $text-color
+    
+}
+.google-map {
+    max-width: 500px;
+    width: 100%;
+    height: 300px;
+}
+
